@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Chat Window" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:URL"
+      content="https://deeproshan-kumar.github.io/chat-window/"
+    />
+    <meta property="og:image" content="assets/images/screenshot.png" />
+    <meta
+      property="og:description"
+      content="Frontend machine task chat window layout design with pure HTML, CSS and Vanilla JS."
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="public/css/app.css" />
+    <title>Chats</title>
+  </head>
+  <body>
+    <div class="app" id="app">
+      <aside class="sidebar" id="sidebar">
+        <ul>
+          <li class="chat-window-toggler">
+            <a
+              href="javascript:void(0)"
+              title="Toggle Chat"
+              id="open-chat-window"
+            >
+              <ion-icon name="menu-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Dashboard">
+              <ion-icon name="stats-chart-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Profile">
+              <ion-icon name="person-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Chats" class="active">
+              <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Connections">
+              <ion-icon name="people-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Requests">
+              <ion-icon name="person-add-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Settings">
+              <ion-icon name="settings-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" title="Languages">
+              <ion-icon name="globe-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+        <button class="toggle-theme" id="toggle-theme">
+          <ion-icon name="moon-outline"></ion-icon>
+        </button>
+        <button class="profile" id="profile">
+          <img src="public/images/model1.jpg" alt="My DP" />
+        </button>
+      </aside>
+      <section class="chats" id="chats">
+        <h1>Chats</h1>
+        <div class="search-box">
+          <ion-icon name="search-outline" class="icon"></ion-icon>
+          <input
+            type="search"
+            name="search"
+            class="search"
+            id="search"
+            autocomplete="off"
+            placeholder="Search messages or users"
+          />
+        </div>
+        <div class="active-friends" id="active-friends">
+          <ul>
+            <li>
+              <div class="widget">
+                <div class="dp">
+                  <img src="public/images/model5.jpg" alt="DP" />
+                </div>
+                <h4>Patrick</h4>
+              </div>
+            </li>
+            <li>
+              <div class="widget">
+                <div class="dp">
+                  <img src="public/images/model3.jpg" alt="DP" />
+                </div>
+                <h4>Doris</h4>
+              </div>
+            </li>
+            <li>
+              <div class="widget">
+                <div class="dp">
+                  <img src="public/images/model4.jpg" alt="DP" />
+                </div>
+                <h4>Emily</h4>
+              </div>
+            </li>
+            <li>
+              <div class="widget">
+                <div class="dp">
+                  <img src="public/images/model6.jpg" alt="DP" />
+                </div>
+                <h4>Steve</h4>
+              </div>
+            </li>
+            <li>
+              <div class="widget">
+                <div class="dp">
+                  <img src="public/images/model2.jpeg" alt="DP" />
+                </div>
+                <h4>Shanaya</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="recents">
+          <h2>Recent</h2>
+          <div class="icon-list-container">
+            <div class="icon-list">
+              <div class="group">
+                <div class="dp">
+                  <img src="public/images/model5.jpg" alt="DP" />
+                </div>
+                <div class="details">
+                  <h4>Patrick Hendricks</h4>
+                  <p>hey! there I'm available</p>
+                </div>
+              </div>
+              <div class="timestamp">
+                <time>02:50&nbsp;AM</time>
+              </div>
+            </div>
+            <div class="icon-list">
+              <div class="group">
+                <div class="dp">
+                  <img src="public/images/model4.jpg" alt="DP" />
+                </div>
+                <div class="details">
+                  <h4>Mark Messer</h4>
+                  <p>
+                    <ion-icon name="image-outline" class="icon"></ion-icon
+                    >Images
+                  </p>
+                </div>
+              </div>
+              <div class="timestamp">
+                <time>10:30&nbsp;AM</time>
+                <span class="message-count"> 02 </span>
+              </div>
+            </div>
+            <div class="icon-list">
+              <div class="group">
+                <div class="dp">
+                  <div class="nodp">G</div>
+                </div>
+                <div class="details">
+                  <h4>General</h4>
+                  <p>this theme is Awesome!</p>
+                </div>
+              </div>
+              <div class="timestamp">
+                <time>02:06&nbsp;AM</time>
+              </div>
+            </div>
+            <div class="icon-list active">
+              <div class="group">
+                <div class="dp">
+                  <img src="public/images/model3.jpg" alt="DP" />
+                </div>
+                <div class="details">
+                  <h4>Doris Brown</h4>
+                  <div class="typing-indicator">
+                    typing
+                    <div class="anim"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="timestamp">
+                <time>10:05&nbsp;PM</time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <main class="main" id="main">
+        <header class="header">
+          <div class="panel left-panel">
+            <div>
+              <button
+                title="Toggle Chat"
+                class="chat-window-toggler close"
+                id="close-chat-window"
+              >
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+              <div class="dp">
+                <img src="public/images/model3.jpg" alt="DP" />
+              </div>
+              <h4>Doris Brown</h4>
+              <span class="online-status online"></span>
+            </div>
+          </div>
+          <div class="panel right-panel">
+            <nav>
+              <button class="btn search-button" id="search-button">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+              <button class="btn call-button" id="call-button">
+                <ion-icon name="call-outline"></ion-icon>
+              </button>
+              <button class="btn vcall-button" id="vcall-button">
+                <ion-icon name="videocam-outline"></ion-icon>
+              </button>
+              <button class="btn profile-button" id="profile-button">
+                <ion-icon name="person-outline"></ion-icon>
+              </button>
+              <div class="actions">
+                <button
+                  class="btn chat-control-button"
+                  id="chat-controls-button"
+                >
+                  <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                </button>
+                <ul class="options">
+                  <li>View Contact</li>
+                  <li>Search</li>
+                  <li>Add to list</li>
+                  <li>Report</li>
+                  <li>Block</li>
+                  <li>Mute Notifications</li>
+                  <li>Chat Theme</li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <div class="chat-window" id="chat-window">
+          <div class="wrapper">
+            <div class="message message-mine">
+              <div class="inner">
+                <div class="group">
+                  <div class="dp">
+                    <img src="public/images/model3.jpg" alt="DP" />
+                  </div>
+                  <div class="contents">
+                    <div class="msg">
+                      <p>Good Morning</p>
+                      <p>
+                        <ion-icon name="time-outline" class="icon"></ion-icon
+                        >10:00
+                      </p>
+                    </div>
+                    <h5>Doris Brown</h5>
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="ellipsis" id="ellipsis">
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                  </button>
+                  <ul class="options" id="options">
+                    <li>Reply</li>
+                    <li>Forword</li>
+                    <li>Pin</li>
+                    <li>Delete</li>
+                    <li>Copy</li>
+                    <li>Star</li>
+                    <li>Select</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="message message-opponent">
+              <div class="inner">
+                <div class="group">
+                  <div class="dp">
+                    <img src="public/images/model4.jpg" alt="DP" />
+                  </div>
+                  <div class="contents">
+                    <div class="msg">
+                      <p>
+                        Good morning, How are you? What about our next meeting?
+                      </p>
+                      <p>
+                        <ion-icon name="time-outline" class="icon"></ion-icon
+                        >10:02
+                      </p>
+                    </div>
+                    <h5>Patricia Smith</h5>
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="ellipsis" id="ellipsis">
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                  </button>
+                  <ul class="options" id="options">
+                    <li>Reply</li>
+                    <li>Forword</li>
+                    <li>Pin</li>
+                    <li>Delete</li>
+                    <li>Copy</li>
+                    <li>Star</li>
+                    <li>Select</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="separator">
+              <label class="label">Today</label>
+            </div>
+            <div class="message">
+              <div class="inner">
+                <div class="group">
+                  <div class="dp">
+                    <img src="public/images/model3.jpg" alt="DP" />
+                  </div>
+                  <div class="contents">
+                    <div class="msg">
+                      <p>Yeah everthing is fine</p>
+                      <p>
+                        <ion-icon name="time-outline" class="icon"></ion-icon
+                        >10:05
+                      </p>
+                    </div>
+                    <h5>Doris Brown</h5>
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="ellipsis" id="ellipsis">
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                  </button>
+                  <ul class="options" id="options">
+                    <li>Reply</li>
+                    <li>Forword</li>
+                    <li>Pin</li>
+                    <li>Delete</li>
+                    <li>Copy</li>
+                    <li>Star</li>
+                    <li>Select</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer" id="footer">
+          <div class="group">
+            <input
+              type="text"
+              name="type-message"
+              id="type-message"
+              autocomplete="off"
+              placeholder="Enter Message..."
+            />
+            <button class="btn emoji-picker">
+              <ion-icon name="happy-outline"></ion-icon>
+            </button>
+            <button class="btn attachment">
+              <ion-icon name="attach-outline"></ion-icon>
+            </button>
+            <button class="btn image">
+              <ion-icon name="image-outline"></ion-icon>
+            </button>
+            <button class="btn send" id="send-message">
+              <ion-icon name="send-outline"></ion-icon>
+            </button>
+          </div>
+        </footer>
+      </main>
+      <div class="search-popup" id="search-popup">
+        <button class="btn close" id="close-popup">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="wrapper">
+          <input
+            type="search"
+            name="search-frnd"
+            id="search-frnd"
+            autocomplete="off"
+            placeholder="Search messages..."
+          />
+          <button class="btn search-button">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="public/scripts/app.js" defer></script>
+  </body>
+</html>
